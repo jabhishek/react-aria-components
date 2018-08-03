@@ -1,22 +1,28 @@
 {
   "name": "react-aria-components",
   "version": "0.1.0",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "private": true,
   "dependencies": {
-    "@storybook/cli": "^3.4.8",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build:main": "babel --copy-files --out-dir lib --ignore *.test.js src",
+    "validate": "npm run build:main"
   },
   "devDependencies": {
-    "@storybook/react": "^3.4.8",
+    "@babel/cli": "^7.0.0-beta.55",
+    "@babel/core": "^7.0.0-beta.55",
+    "@babel/preset-env": "^7.0.0-beta.55",
+    "@babel/preset-react": "^7.0.0-beta.55",
     "@storybook/addon-actions": "^3.4.8",
     "@storybook/addon-links": "^3.4.8",
     "@storybook/addons": "^3.4.8",
+    "@storybook/cli": "^3.4.8",
+    "@storybook/react": "^3.4.8",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0"
   }
